@@ -145,7 +145,86 @@ export default function SignUp() {
                   autoFocus
                 />
               </Grid>
-              {/* ... other Grid items ... */}
+              <Grid item xs={12} sm={6}>
+                <TextField
+                  required
+                  fullWidth
+                  id="lastName"
+                  label="Last Name"
+                  name="lastName"
+                  autoComplete="family-name"
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <TextField
+                  required
+                  fullWidth
+                  name="userName"
+                  label="userName"
+                  type="userName"
+                  id="userName"
+                  autoComplete="userName"
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <TextField
+                  required
+                  fullWidth
+                  id="email"
+                  label="Email Address"
+                  name="email"
+                  autoComplete="email"
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <TextField
+                  required
+                  fullWidth
+                  name="password"
+                  label="Password"
+                  type="password"
+                  id="password"
+                  autoComplete="new-password"
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <TextField
+                  required
+                  fullWidth
+                  name="mobile"
+                  label="mobile"
+                  type="mobile"
+                  id="mobile"
+                  autoComplete="mobile-number"
+                />
+                <FormControl id="gender">
+                  <FormLabel id="demo-row-radio-buttons-group-label">
+                    Gender
+                  </FormLabel>
+                  <RadioGroup
+                    row
+                    aria-labelledby="demo-row-radio-buttons-group-label"
+                    name="row-radio-buttons-group"
+                    onChange={handleRadioChange}
+                  >
+                    <FormControlLabel
+                      value="female"
+                      control={<Radio />}
+                      label="Female"
+                    />
+                    <FormControlLabel
+                      value="male"
+                      control={<Radio />}
+                      label="Male"
+                    />
+                    <FormControlLabel
+                      value="other"
+                      control={<Radio />}
+                      label="Other"
+                    />
+                  </RadioGroup>
+                </FormControl>
+              </Grid>
             </Grid>
             <Button
               type="submit"
