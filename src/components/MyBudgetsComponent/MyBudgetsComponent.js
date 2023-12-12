@@ -254,19 +254,21 @@ class MyBudgetsComponent extends Component {
         "Content-Type": "application/json",
       },
     });
-    var count = 1;
-    const budgetArray = response.data.budgets;
-    const rows = budgetArray.map((budget) =>
-      createData(
-        count++,
-        budget.budget_id,
-        budget.user_id,
-        budget.item,
-        budget.budget
-      )
-    );
-    this.setState({ rows });
-    console.log(rows);
+    if (response.status != 201) {
+      var count = 1;
+      const budgetArray = response.data.budgets;
+      const rows = budgetArray.map((budget) =>
+        createData(
+          count++,
+          budget.budget_id,
+          budget.user_id,
+          budget.item,
+          budget.budget
+        )
+      );
+      this.setState({ rows });
+      console.log(rows);
+    }
   }
 
   handleEditClick = (row) => {
@@ -453,8 +455,8 @@ class MyBudgetsComponent extends Component {
     try {
       await axios.delete('http://54.163.5.110:3001/app/userBudget/', { budget_id: budgetToDelete.budget_id }, {
         headers: {
-            Authorization: 'Bearer ' + token,
-            'Content-Type': 'application/json',
+          Authorization: 'Bearer ' + token,
+          'Content-Type': 'application/json',
         },
 
       });

@@ -22,7 +22,7 @@ export default function AppBarComponent() {
   var pages = [];
   var settings = [];
   if (token) {
-    pages = ["My Budgets", "Monthly Budgets", "Dashboard", "Configure", "expenses"];
+    pages = ["My Budgets", "Expenses", "Dashboard"];
     settings = ["Profile", "Logout"];
   }
 

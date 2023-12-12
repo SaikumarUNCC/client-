@@ -130,7 +130,7 @@ function App() {
           <Route path='/mybudgets' element={<MyBudgetsComponent />} />
           <Route path='/profile' element={<ProfileComponent />} />
           <Route path='/dashboard' element={<DashboardComponent />} />
-          <Route path='/monthlybudgets' element={<MonthlyBudgets />} />
+          <Route path='/expenses' element={<MonthlyBudgets />} />
 
 
       </Routes>)
