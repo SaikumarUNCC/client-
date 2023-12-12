@@ -271,7 +271,7 @@ class MonthlyBudgets extends Component {
     async componentDidMount() {
         const token = localStorage.getItem("token");
         const response = await axios.get(
-            "http://localhost:3001/app/userMonthlyBudget",
+            "http://54.163.5.110:3001/app/userMonthlyBudget",
             {
                 headers: {
                     Authorization: "Bearer " + token,
@@ -355,7 +355,7 @@ class MonthlyBudgets extends Component {
         try {
           // Send the updated data to the server
           const response = await axios.put(
-            "http://localhost:3001/app/userMonthlyBudget",
+            "http://54.163.5.110:3001/app/userMonthlyBudget",
             {
               budget_id: this.state.bid,
               item: editedItemName,
@@ -436,7 +436,7 @@ class MonthlyBudgets extends Component {
 
         const token = localStorage.getItem("token");
         const response = await axios.get(
-            `http://localhost:3001/app/userMonthlyBudget/${month}/${this.state.yeard}`,
+            `http://54.163.5.110:3001/app/userMonthlyBudget/${month}/${this.state.yeard}`,
             {
                 headers: {
                     Authorization: "Bearer " + token,
@@ -481,7 +481,7 @@ class MonthlyBudgets extends Component {
 
         const token = localStorage.getItem("token");
         const response = await axios.get(
-            `http://localhost:3001/app/userMonthlyBudget/${year}`,
+            `http://54.163.5.110:3001/app/userMonthlyBudget/${year}`,
             {
                 headers: {
                     Authorization: "Bearer " + token,
@@ -623,7 +623,7 @@ class MonthlyBudgets extends Component {
 
         const token = localStorage.getItem("token");
         const response = await axios.put(
-            "http://localhost:3001/app/userMonthlyBudget",
+            "http://54.163.5.110:3001/app/userMonthlyBudget",
             reqData,
             {
                 headers: {
@@ -687,7 +687,7 @@ class MonthlyBudgets extends Component {
         }
         else {
             const response = await axios.post(
-                "http://localhost:3001/app/userMonthlyBudget",
+                "http://54.163.5.110:3001/app/userMonthlyBudget",
                 this.state.newMonthlyData,
                 {
                     headers: {

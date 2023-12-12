@@ -260,7 +260,7 @@ class MonthlyBudgetComponent extends Component {
   async componentDidMount() {
     const token = localStorage.getItem("token");
     const response = await axios.get(
-      "http://localhost:3001/app/userMonthlyBudget",
+      "http://54.163.5.110:3001/app/userMonthlyBudget",
       {
         headers: {
           Authorization: "Bearer " + token,
@@ -447,7 +447,7 @@ class MonthlyBudgetComponent extends Component {
 
     const token = localStorage.getItem("token");
     const response = await axios.put(
-      "http://localhost:3001/app/userMonthlyBudget",
+      "http://54.163.5.110:3001/app/userMonthlyBudget",
       reqData,
       {
         headers: {
@@ -506,7 +506,7 @@ class MonthlyBudgetComponent extends Component {
       this.setState({ errorOpen: !this.state.errorOpen });
       console.log("HERE22222")
       const response = await axios.post(
-        "http://localhost:3001/app/userMonthlyBudget",
+        "http://54.163.5.110:3001/app/userMonthlyBudget",
         this.state.newMonthlyData,
         {
           headers: {

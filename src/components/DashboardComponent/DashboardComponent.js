@@ -40,7 +40,7 @@ class DashboardComponent extends Component {
     componentDidMount() {
         const token = localStorage.getItem('token');
         axios
-            .get('http://localhost:3001/app/userBudget', {
+            .get('http://54.163.5.110:3001/app/userBudget', {
                 headers: {
                     Authorization: 'Bearer ' + token,
                     'Content-Type': 'application/json',
@@ -80,7 +80,7 @@ class DashboardComponent extends Component {
             });
 
         axios
-            .get('http://localhost:3001/app/userMonthlyBudget', {
+            .get('http://54.163.5.110:3001/app/userMonthlyBudget', {
                 headers: {
                     Authorization: 'Bearer ' + token,
                     'Content-Type': 'application/json',

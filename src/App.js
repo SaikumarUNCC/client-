@@ -64,7 +64,7 @@ function App() {
     // Implement any necessary actions to refresh the token or extend the session
     try {
       const response = await axios.post(
-        "http://localhost:3001/app/refreshToken",
+        "http://54.163.5.110:3001/app/refreshToken",
         null,
         {
           headers: { Authorization: `Bearer ${token}` },

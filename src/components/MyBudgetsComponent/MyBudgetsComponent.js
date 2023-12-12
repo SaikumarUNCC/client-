@@ -248,7 +248,7 @@ class MyBudgetsComponent extends Component {
 
   async componentDidMount() {
     const token = localStorage.getItem("token");
-    const response = await axios.get("http://localhost:3001/app/userBudget", {
+    const response = await axios.get("http://54.163.5.110:3001/app/userBudget", {
       headers: {
         Authorization: "Bearer " + token,
         "Content-Type": "application/json",
@@ -310,7 +310,7 @@ class MyBudgetsComponent extends Component {
       try {
         // Send the updated data to the server
         const response = await axios.put(
-          "http://localhost:3001/app/userBudget",
+          "http://54.163.5.110:3001/app/userBudget",
           {
             budget_id: editedRow.budget_id,
             item: editedItemName,
@@ -417,7 +417,7 @@ class MyBudgetsComponent extends Component {
     }
     else {
       const response = await axios.post(
-        "http://localhost:3001/app/userBudget",
+        "http://54.163.5.110:3001/app/userBudget",
         {
           item: this.state.newItemName,
           budget: this.state.newBudgetValue,
@@ -451,7 +451,7 @@ class MyBudgetsComponent extends Component {
     console.log(token);
     const { budgetToDelete } = this.state;
     try {
-      await axios.delete('http://localhost:3001/app/userBudget/', { budget_id: budgetToDelete.budget_id }, {
+      await axios.delete('http://54.163.5.110:3001/app/userBudget/', { budget_id: budgetToDelete.budget_id }, {
         headers: {
             Authorization: 'Bearer ' + token,
             'Content-Type': 'application/json',

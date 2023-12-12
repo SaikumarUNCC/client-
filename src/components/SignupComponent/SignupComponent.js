@@ -65,7 +65,7 @@ export default function SignUp() {
     };
     var response;
     try {
-      response = await axios.post("http://localhost:3001/app/signup", userData);
+      response = await axios.post("http://54.163.5.110:3001/app/signup", userData);
       switch (response.status) {
         case 200:
           setSuccessOpen(true);
